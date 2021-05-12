@@ -1,0 +1,20 @@
+{
+  "name": "vismaholidayplannertask",
+  "version": "1.0.0",
+  "description": "Programming task for Visma Solutions",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samsamit/VismaHolidayPlannerTask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samsamit/VismaHolidayPlannerTask/issues"
+  },
+  "homepage": "https://github.com/samsamit/VismaHolidayPlannerTask#readme",
+  "type": "module"
+}

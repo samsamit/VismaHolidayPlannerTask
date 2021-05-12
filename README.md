@@ -23,3 +23,19 @@ Aloitan tehtävän tekemisen kirjoittamalla omat ajatuksen ja tehtävälistan te
   - Teen noista vapaapäivistä parametrin tuolle luokalle niin ne voi sitten luokan luomisen yhteydessä määrittää aina uudelleen
 
 Aloitan tällä nyt tekemään tehtävää ja kommentoin tähän alle siinä samalla ajatuksia...
+
+- Meni aika paljon aikaa uusimman Node.js verion asennukseen ja importin toimintaan saamiseen...
+
+- Aloitin tekemällä parseTimespanInputString funktion joka siis parsii siitä inputistta kaksi date tyyppistä muuttujaa
+
+  - tein myös funktion checkIfStringsAreNumbers joka katsoo onko inputtina annetussa sstring arrayssa kaikki stringit numeroita ja palauttaa booleanarvon vastauksena
+  - Tutkittuani tatrkemmin Date tietotyyppiä löysin helpomman keinon selvittää onko parrsittu tulos oikeasti päivämäärä
+    - isValidDate funktio hoitaa tämän tarkistuksen
+  - Testatuksen jälkeen huomasin että Date tietotyypin luonnissa voidaan laittaa päivien kohdalle vaikka 100 päivää. Tämä täytyy esttää jotenkin
+  - Tein tarkastuksen siteen että katson vastaako annettu päivä ja kuukausi numero Datee tietotyypin luonnin jälkeen tullutta päivää ja kuukautta
+
+- Seuraavaksi selvitän näiden päivämäärien välisieen päivien määrän getPassedDays funktiolla
+
+  - Sisään Date tyyppiset muutttujat alku ja loppupäivälle ja ulos päivien määrä
+
+- tähän väliin committi
