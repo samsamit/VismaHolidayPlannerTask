@@ -58,5 +58,17 @@ Aloitan tällä nyt tekemään tehtävää ja kommentoin tähän alle siinä sam
   - Tällä tatvalla luokasta saadaan enemmän muokattava
 
 - Tein funnktion calculateBonusHolidaysAndSundays joka looppaa aikavälin kaikki päivät läpi ja tarkistaa onko päivä sunnintati tai onko se päivä nationalHolidays taulukossa
+
   - Tätä varten minun piti muutta constructoria siten että nationalHolidays taulukkoon laitetaan päivämäärä milliseekunttimuodotssa
   - Täten voin heelposti tarkistaa include metodilla sisältääkö taulukko loopattavan päivän
+
+- viimeeiseksi jää vain vähentää bonuslomapäivät kokonaispäivistä annetulta aikaväliltä ja palauttaa käytettävien lomapäivien summa
+- Vielä lisäsin parseTimespanInputString muuttujaan tarkasstuksen että onko aloitusaika isompi kuin lopetusaika
+
+## After notes...
+
+Tehtävä sinällään ei ollut vaikea. En ole aiemmin tarvinnut Date tietotyyppiä näin joten sitä piti vähän opiskella. Alussa aikaa meni paljon tuon testiympäristön pystyttämiseen koska olen yleensä luonut projektin jollain valmiilla pohjalla.
+
+Oli myös erittäin häiritsevää koodata ilman tyypitystä ja sen tuomaa varmuutta. Typescript puolelta tulleena koen että se helpottaa monessa ssuhteessa tätä koodaamista. Onneksi tämä oli vielä kohtalaisen pieni projekti niin ei mennyt vielä sekaisin että mitä tyyppiä minnekkin pitää laittaa.
+
+Metodi calculateUsedHolidays palauttaa nyt stringin jossa käytetyt päivät selviää tai jos inputissa oli jotain ongelmia.

@@ -36,14 +36,15 @@ const parseTimespanInputString = (timespanString) => {
     if(typeof timespanString !== "string") return null;
     //Split two dates from input string
     const dateeSpanStrings = timespanString.split("-");
-    if(dateeSpanStrings.length !== 2) return {error: "date was not given in required format (1.1.2021)"};;
+    if(dateeSpanStrings.length !== 2) return {error: "Date was not given in required format (1.1.2021)"};;
     let [startDateString, endDateString] = dateeSpanStrings;
     const startDate = getDateFromDateString(startDateString);
     const endDate = getDateFromDateString(endDateString);
     //Check if date object created succeesfully
     if(!isValidDate(startDate) || !isValidDate(endDate)){
-        return {error: "date was not given in required format (1.1.2021)"};
+        return {error: "Date was not given in required format (1.1.2021)"};
     }
+    if(startDate.getTime() > endDate.getTime()) return {error: "Start date is bigger than end date!"};
     return {startDate, endDate};
 }
 
