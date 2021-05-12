@@ -26,6 +26,11 @@ Aloitan tällä nyt tekemään tehtävää ja kommentoin tähän alle siinä sam
 
 - Meni aika paljon aikaa uusimman Node.js verion asennukseen ja importin toimintaan saamiseen...
 
+- Loin luokan HolidayPlanner jonka konstructoriin annoin kolme muuttujaa
+
+  - nationalHolidays muuttuja on Date array joka sisältää kaikki kansainväliset vapaapäivät
+  - holidayPeriodStart ja holidayPeriodEnd määrää loma-ajan
+
 - Aloitin tekemällä parseTimespanInputString funktion joka siis parsii siitä inputistta kaksi date tyyppistä muuttujaa
 
   - tein myös funktion checkIfStringsAreNumbers joka katsoo onko inputtina annetussa sstring arrayssa kaikki stringit numeroita ja palauttaa booleanarvon vastauksena
@@ -39,3 +44,19 @@ Aloitan tällä nyt tekemään tehtävää ja kommentoin tähän alle siinä sam
   - Sisään Date tyyppiset muutttujat alku ja loppupäivälle ja ulos päivien määrä
 
 - tähän väliin committi
+
+- Päätin siisstiä parseTimespanInputString funktiota teekemällä apufunktion getDateFromDateString jolle annetaan sisään string muodossa päivämäärä ja se palauttaa päivämäärän Date muodossa
+
+- Onko annettu päivämäärä loma-ajan sisällä, tätä varten tein luokkaan oman methodin nimeltä isDateInHolidayperiod
+
+  - Tein sen luokkaan sisälle jotta sitä voitaisiin käyttää jossain muussakin yhteydessä nimenomaan HolidayPlanner teemalla
+  - Metodi ottaa sisään dateee tyypin ja kertoo boolean arvolla onko se luokan construktorissa määriteltyjen päivämäärien sisällä
+
+- Kun saan getPassedDays funktiosta päivämäärät niin tarkistan ylittääkö ne määrätyn maksimiloma-ajan
+
+  - Tätä varten tein luokan construktoriin uuden muuttujan maxHolidaySpan joka ottaa siis maksimi loma-ajan päivinä
+  - Tällä tatvalla luokasta saadaan enemmän muokattava
+
+- Tein funnktion calculateBonusHolidaysAndSundays joka looppaa aikavälin kaikki päivät läpi ja tarkistaa onko päivä sunnintati tai onko se päivä nationalHolidays taulukossa
+  - Tätä varten minun piti muutta constructoria siten että nationalHolidays taulukkoon laitetaan päivämäärä milliseekunttimuodotssa
+  - Täten voin heelposti tarkistaa include metodilla sisältääkö taulukko loopattavan päivän
